@@ -6,7 +6,7 @@ function App() {
   return (
     <Provider store={store}>
     <div>
-      <MessageContainer senderIdentifiant={store.message.senderIdentifiant} />
+      <MessageContainer />
     </div>
     </Provider>
   );

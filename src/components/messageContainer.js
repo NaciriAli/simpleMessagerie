@@ -8,7 +8,7 @@ function messageContainer(props) {
   return (
     <div>
       <div>messageContainer</div>
-      <button onClick={() => props.readLastMessage(props.message.senderIdentifiant)}>read last message</button>
+      <button onClick={() => props.readLastMessage(props.senderIdentifiant)}>read last message</button>
       <div>Message: {props.message}</div>
     </div>
   )
@@ -23,12 +23,12 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        sendMessage: () => dispatch(sendMessage()),
-        sendMessageAll: () => dispatch(sendMessageAll()),
-        readLastMessage: () => dispatch(readLastMessage()),
-        readAllMessages: () => dispatch(readAllMessages()),
-        deleteMessage: () => dispatch(deleteMessage()),
-        deleteAllMessages: () => dispatch(deleteAllMessages())
+        sendMessage: (data) => dispatch(sendMessage(data)),
+        sendMessageAll: (data) => dispatch(sendMessageAll(data)),
+        readLastMessage: (senderIdentifiant) => dispatch(readLastMessage(senderIdentifiant)),
+        readAllMessages: (senderIdentifiant) => dispatch(readAllMessages(senderIdentifiant)),
+        deleteMessage: (messageId) => dispatch(deleteMessage(messageId)),
+        deleteAllMessages: (senderIdentifiant) => dispatch(deleteAllMessages(senderIdentifiant))
     }
 }
 
