@@ -11,6 +11,7 @@ const send_MessageAll = (data) => {
 };
 
 const read_LastMessage = (senderIdentifiant) => {
+    console.log("from read_LastMessage",senderIdentifiant);
     return axios.get(URL.API_URL_V1 + `/read-last-message/${senderIdentifiant}`);
 };
 

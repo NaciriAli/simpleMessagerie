@@ -8,7 +8,7 @@ function messageContainer(props) {
   return (
     <div>
       <div>messageContainer</div>
-      <button onClick={() => props.readLastMessage(props.senderIdentifiant)}>read last message</button>
+      <button onClick={() => console.log("state object:", props.state)}>read last message</button>
       <div>Message: {props.message}</div>
     </div>
   )
@@ -16,6 +16,7 @@ function messageContainer(props) {
 
 const mapStateToProps = state => {
     return {
+      state: state.message,
       content: state.message.content,
       senderIdentifiant: state.message.senderIdentifiant,
       recipientIdentifiant: state.message.recipientIdentifiant
