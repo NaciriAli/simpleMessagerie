@@ -3,7 +3,7 @@ import * as type from "../actions/messageActionTypes";
 const initialState = {
     message: {
         content: '',
-        senderIdentifiant: 'A1',
+        senderIdentifiant: 'A2',
         recepientIdentifiant: ''
     }
 }
